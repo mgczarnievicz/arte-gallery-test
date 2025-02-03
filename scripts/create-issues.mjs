@@ -64,6 +64,7 @@ async function main() {
     const labels = issue.labels.map((label) => ({
       name: label.name,
       color: label.color,
+      sort: "created-asc ",
     }));
     await createIssue(issue.title, issue.body, labels);
     console.log(`Created issue: ${issue.title}`);
